@@ -1,7 +1,6 @@
 During testing, I identified a critical OS command injection vulnerability caused by improper input validation in a user-controlled field within the application. Using Burp Suite, I intercepted and modified a GET request 
 to inject system commands directly into the server-side process. By appending a command such as ;id to the input parameter, I was able to execute arbitrary commands on the underlying system and confirm 
-the user context of the web server. I further demonstrated the impact by establishing a reverse shell using a Netcat listener from my Kali Linux attack machine, resulting in remote command execution 
-on the target server. This confirmed that an attacker could potentially achieve full system compromise through unsanitized input handling.
+the user context of the web server. This confirmed that an attacker could potentially achieve full system compromise through unsanitized input handling.
 
 As seen (Figure 1), starting off on the homepage of the website I was prompted to input an IP address. This is the intended function of the site.
 
